@@ -1,0 +1,375 @@
+.saved-candidates-container {
+    width: 100%;
+    /* margin: 20px auto; */
+    background: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    text-align: left;
+    border-bottom: 2px solid rgb(146, 145, 145);
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Candidate List with Scrollbar Hidden */
+.candidate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+    /* Set maximum height for scrollable content */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    padding-right: 10px;
+    /* Space for internal content */
+}
+
+.candidate-list::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar for WebKit browsers */
+    background: transparent;
+}
+
+.candidate-list {
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+.candidate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin: 0px 10px;
+    border-bottom: 2px solid #efeded;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.candidate:hover {
+    border: 2px solid #0a65cc98;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.candidate-details {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.candidate-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.candidate-details p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.candidate-profile-name h2 {
+    font-size: x-large;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bookmark {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffbf00;
+}
+
+.view-profile {
+    background: #e7f0fa;
+    border: none;
+    color: #0a65cc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.view-profile:hover {
+    background: #0a65cc;
+    color: white;
+}
+
+.more-options {
+    position: relative;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+}
+
+.more-options:hover .dropdown {
+    display: block;
+}
+
+.dropdown button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    background: #f1f1f1;
+}
+
+.custom-bookmark-icon {
+    color: #0a65cc;
+}
+
+/* Overlay Background */
+/* Overlay container */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Overlay content */
+.overlay-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 800px;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Custom scrollbar styling */
+.overlay-content::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.overlay-content {
+    scrollbar-width: none;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+/* Overlay content headings */
+.overlay-content h2,
+.overlay-content h3 {
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+    font-weight:300;
+}
+
+/* Overlay content paragraphs */
+.overlay-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Contact information list */
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Social media section */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.social-icons a {
+    margin-right:30px;
+    /* padding:20x; */
+    /* font-size: 1.2rem; */
+    color: #666;
+    text-decoration: none;
+    /* margin-left:30px; */
+}
+
+.social-icons{
+    margin-left: 10px;
+}
+
+.candidate-profile{
+    /* background-color: red; */
+    display: flex;
+    /* flex: 2; */
+    justify-content:flex-start;
+    margin-bottom: 10px;
+    font-size:x-large;
+}
+
+.candidate-profile p{
+    font-size: medium;
+}
+
+.candidate-bio-1{
+    border-bottom: 2px solid #e4e5e8;
+    margin: 15px;
+    width: 80%;
+}
+
+.candidate-profile-image{
+    background-color: #767f8c;
+    padding: 30px;
+    border-radius: 50%;
+    margin: 15px;
+
+}
+
+.candidate-profile-name{
+    /* background-color: #007bff; */
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+      
+        justify-content: flex-end;
+       
+}
+.candidate-profile-name h2{
+    font-size: larger;
+}
+
+.candidate-profile-section-1{
+    flex: 2;
+    margin-right: 10px;
+}
+
+.candidate-profile-name p{
+    margin-top: 0;
+}
+
+.candidate-profile-section{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+.candidate-profile-section {
+    
+}
+
+.h3{
+    /* color: red; */
+    font-size: 20px;
+}
+
+.additional-info{
+display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: self-end;
+    padding: 15px;
+
+}
+
+/* .additional-info-1{
+    border: 2px solid;
+} */
+
+.info-group-nation{
+    margin-left: 25px;
+}
+
+.Contact-info{
+    margin-top:30px;
+}
+
+.Contact-info ul{
+   /* background-color: red; */
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+
+}
+
+.Contact-info li{
+margin-bottom: 10px;
+}

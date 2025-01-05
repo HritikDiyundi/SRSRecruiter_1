@@ -1,0 +1,74 @@
+.scheduler-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.scheduler-container::-webkit-scrollbar{
+  height: 0;
+  width: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border: none;
+}
+
+th {
+
+      background-color: #f4f4f4;
+  
+  font-weight: bold;
+}
+
+button {
+  padding: 8px 12px;
+  color: #0a65cc;
+  background-color: #e7f0fa;
+      
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+
+          background-color: #0a65cc;
+          color: white;
+      
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+}
+
+.pending{
+  background-color: #8dc48d;
+  margin-top: 10px;
+}

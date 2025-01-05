@@ -1,0 +1,160 @@
+/* General Reset */
+body,
+h2,
+h3,
+h4,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6f8;
+}
+
+
+.overview_greeting{
+    font-size: medium;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    
+}
+
+.overview_greeting_sub{
+    font-size: small;
+    color: rgb(144, 144, 144);
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+    flex-direction: column;
+    flex-grow: 1;
+    /* padding: 20px; */
+
+}
+
+.main-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Statistics Section */
+.stats {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.stat-1 {
+    display: flex;
+    flex-direction: row;
+    background-color: #e7f0fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-2 {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff6e6;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.stat_icon{
+    padding: 15px;
+    margin-left: 100px;
+    font-size:x-large;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.stat-1 h3, .stat-2 h3 {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.stat span {
+
+    color: #2a2a2a;
+    font-size: small;
+}
+
+/* Job List Heading */
+.jobs h3 {
+    /* margin: 20px 0; */
+}
+
+.jobs {
+    max-height: 400px;
+    /* Set maximum height for the jobs table */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    /* margin-top: 20px; */
+    border: 1px solid #ddd;
+    /* Optional: Add border for clarity */
+    border-radius: 8px;
+    /* Optional: Rounded corners */
+    padding: 10px;
+    /* Optional: Padding for inner content */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.jobs::-webkit-scrollbar {
+    width: 0;
+    /* Remove the scrollbar width */
+    background: transparent;
+    /* Optional: Transparent scrollbar background */
+}
+
+/* Hide scrollbar for Firefox */
+.jobs {
+    scrollbar-width: none;
+    /* Firefox-specific */
+}
+
+/* Preserve the table header while scrolling */
+.jobs-table {
+    width: 100%;
+    /* Ensure table takes full width */
+    border-collapse: collapse;
+    margin: 0;
+    /* Reset margins for consistent spacing */
+}
+
+.jobs-table th,
+.jobs-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    /* Add borders for rows */
+}
+
+.jobs-table th {
+    position: sticky;
+    /* Make headers stick while scrolling */
+    top: 0;
+    /* Stick at the top of the container */
+    background-color: #f4f4f4;
+    z-index: 2;
+    /* Ensure headers are above content */
+}
