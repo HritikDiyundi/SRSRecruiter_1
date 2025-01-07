@@ -80,7 +80,9 @@ export default function Dashboard() {
       { name: "Posted Jobs", icon: "🎯" },
       { name: "Selected Candidates", icon: "💾" },
       { name: "Interview Schedule", icon: "📅" },
+      { name: "Saved Candidates", icon: "💾" },
       { name: "Recruiter Setting", icon: "⚙️" },
+      { name: "Drafted Jobs", icon: "📋" },
     ],
 
     recentApplications: [

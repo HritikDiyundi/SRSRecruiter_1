@@ -16,12 +16,22 @@ const RecruiterDashboard = () => {
       days: "27 days remaining",
       expired: false,
       applicants: [
-        { name: "John Doe", experience: "5 Years", job: "Frontend Developer" },
-        { name: "Jane Smith", experience: "3 Years", job: "UI Designer" },
         {
-          name: "Michael Brown",
-          experience: "2 Years",
-          job: "React Developer",
+          name: "Liam Brown",
+          job: "DevOps Engineer",
+          experience: "8 years",
+          education: "Bachelor's in Software Engineering",
+          personalWebsite: "https://liambrown.dev",
+          bio: "DevOps expert skilled in cloud infrastructure and CI/CD pipelines.",
+          email: "liambrown@example.com",
+          dob: "1987-12-14",
+          nationality: "British",
+          gender: "Male",
+          address: "25 Green Road, London, UK",
+          phone: "+44-20-1234-5678",
+          logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
+          resumeName:"LiamB_DevOps.pdf",
+          
         },
       ],
     },
@@ -33,12 +43,22 @@ const RecruiterDashboard = () => {
       days: "8 days remaining",
       expired: false,
       applicants: [
-        { name: "John Doe", experience: "5 Years", job: "Frontend Developer" },
-        { name: "Jane Smith", experience: "3 Years", job: "UI Designer" },
         {
-          name: "Michael Brown",
-          experience: "2 Years",
-          job: "React Developer",
+          name: "Liam Brown",
+          job: "DevOps Engineer",
+          experience: "8 years",
+          education: "Bachelor's in Software Engineering",
+          personalWebsite: "https://liambrown.dev",
+          bio: "DevOps expert skilled in cloud infrastructure and CI/CD pipelines.",
+          email: "liambrown@example.com",
+          dob: "1987-12-14",
+          nationality: "British",
+          gender: "Male",
+          address: "25 Green Road, London, UK",
+          phone: "+44-20-1234-5678",
+          logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
+          resumeName:"LiamB_DevOps.pdf",
+          
         },
       ],
     },
@@ -50,12 +70,22 @@ const RecruiterDashboard = () => {
       days: "4 days remaining",
       expired: false,
       applicants: [
-        { name: "John Doe", experience: "5 Years", job: "Frontend Developer" },
-        { name: "Jane Smith", experience: "3 Years", job: "UI Designer" },
         {
-          name: "Michael Brown",
-          experience: "2 Years",
-          job: "React Developer",
+          name: "Liam Brown",
+          job: "DevOps Engineer",
+          experience: "8 years",
+          education: "Bachelor's in Software Engineering",
+          personalWebsite: "https://liambrown.dev",
+          bio: "DevOps expert skilled in cloud infrastructure and CI/CD pipelines.",
+          email: "liambrown@example.com",
+          dob: "1987-12-14",
+          nationality: "British",
+          gender: "Male",
+          address: "25 Green Road, London, UK",
+          phone: "+44-20-1234-5678",
+          logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
+          resumeName:"LiamB_DevOps.pdf",
+          
         },
       ],
     },
@@ -67,12 +97,22 @@ const RecruiterDashboard = () => {
       days: "24 days remaining",
       expired: false,
       applicants: [
-        { name: "John Doe", experience: "5 Years", job: "Frontend Developer" },
-        { name: "Jane Smith", experience: "3 Years", job: "UI Designer" },
         {
-          name: "Michael Brown",
-          experience: "2 Years",
-          job: "React Developer",
+          name: "Liam Brown",
+          job: "DevOps Engineer",
+          experience: "8 years",
+          education: "Bachelor's in Software Engineering",
+          personalWebsite: "https://liambrown.dev",
+          bio: "DevOps expert skilled in cloud infrastructure and CI/CD pipelines.",
+          email: "liambrown@example.com",
+          dob: "1987-12-14",
+          nationality: "British",
+          gender: "Male",
+          address: "25 Green Road, London, UK",
+          phone: "+44-20-1234-5678",
+          logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
+          resumeName:"LiamB_DevOps.pdf",
+          
         },
       ],
     },
@@ -85,12 +125,22 @@ const RecruiterDashboard = () => {
       expired: true,
       expired: false,
       applicants: [
-        { name: "John Doe", experience: "5 Years", job: "Frontend Developer" },
-        { name: "Jane Smith", experience: "3 Years", job: "UI Designer" },
         {
-          name: "Michael Brown",
-          experience: "2 Years",
-          job: "React Developer",
+          name: "Liam Brown",
+          job: "DevOps Engineer",
+          experience: "8 years",
+          education: "Bachelor's in Software Engineering",
+          personalWebsite: "https://liambrown.dev",
+          bio: "DevOps expert skilled in cloud infrastructure and CI/CD pipelines.",
+          email: "liambrown@example.com",
+          dob: "1987-12-14",
+          nationality: "British",
+          gender: "Male",
+          address: "25 Green Road, London, UK",
+          phone: "+44-20-1234-5678",
+          logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
+          resumeName:"LiamB_DevOps.pdf",
+          
         },
       ],
     },
@@ -131,7 +181,9 @@ const RecruiterDashboard = () => {
             justifyContent: "space-between",
           }}
         >
-          <h3 style={{ fontSize: "1.3rem", fontWeight: "bold" }}>Recent Posted Jobs</h3>
+          <h3 style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+            Recent Posted Jobs
+          </h3>
           <button
             className=""
             style={{}}

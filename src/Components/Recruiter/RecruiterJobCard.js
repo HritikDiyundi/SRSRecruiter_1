@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./RecruiterJobCard.css";
 import Modal from "../../ModalComponent/Modal";
+import { useNavigate } from "react-router-dom";
 
 
 const RecruiterJobCard = ({
@@ -17,10 +18,26 @@ const RecruiterJobCard = ({
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const[isNewPage, setIsNewPage] =useState(false)
+
+  const navigate=useNavigate();
  
 
   const handleViewApplicants = () => {
     setIsModalOpen(true);
+  };
+
+  // const =()=>{
+  //    navigate("/viewprofile")
+
+  // }
+
+  const handleViewProfile = (applicants) => {
+    navigate(`/viewprofile/`, { state: { 
+      applicants,
+      
+     },
+     });
   };
   const closeModal = () => {
     setIsModalOpen(false);
@@ -88,7 +105,7 @@ const RecruiterJobCard = ({
                 <td>{applicant.experience}</td>
                 <td>{applicant.job}</td>
                 <td>
-                  <button>View Profile</button>
+                  <button onClick={()=>handleViewProfile(applicants)}>View Profile</button>
                 </td>
               </tr>
             ))}
