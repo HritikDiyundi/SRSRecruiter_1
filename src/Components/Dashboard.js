@@ -85,7 +85,6 @@ export default function Dashboard() {
       { name: "Saved Candidates", icon: "💾" },
       { name: "Drafted Jobs", icon: "📋" },
       { name: "Recruiter Setting", icon: "⚙️" },
-      
     ],
 
     recentApplications: [
@@ -1517,8 +1516,8 @@ export default function Dashboard() {
         return <SavedCandidatesPage />;
       case "Post Job":
         return <JobPost />;
-        case "Drafted Jobs":
-          return <DraftedJobs />;
+      case "Drafted Jobs":
+        return <DraftedJobs />;
 
       case "Recruiter Setting":
         return <RecruiterSetting />;

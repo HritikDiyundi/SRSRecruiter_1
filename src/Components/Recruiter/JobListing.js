@@ -92,12 +92,14 @@ const JobListing = ({ jobs }) => {
   const dataToDisplay = jobs && jobs.length > 0 ? jobs : staticJobs;
 
   return (
-    <div className="main-content">
-      <div className="jobs">
-        <h3 style={{marginBottom:"10px",fontSize:"1.3rem"}}>Posted Jobs</h3>
-        <table className="jobs-table">
+    <div className="recr_main-content">
+      <div className="recr_jobs">
+        <h3 style={{ marginBottom: "10px", fontSize: "1.3rem" }}>
+          Posted Jobs
+        </h3>
+        <table className="recr_jobs-table">
           <thead>
-            <tr className="jobs-table-titles">
+            <tr className="recr_jobs-table-titles">
               <th>Jobs</th>
               <th>Status</th>
               <th>Applications</th>

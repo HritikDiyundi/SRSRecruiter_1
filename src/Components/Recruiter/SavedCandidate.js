@@ -206,7 +206,7 @@ const candidates = [
 ];
 
 const SavedCandidate = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [selectedCandidate, setSelectedCandidate] = useState(null);
   const [dropdownVisibility, setDropdownVisibility] = useState({});
 
@@ -218,8 +218,8 @@ const SavedCandidate = () => {
     setSelectedCandidate(null);
   };
 
-  const handleViewProfile=()=>{
-    navigate("/viewprofile",{state:{defaultSelected:true} })
+  const handleViewProfile = () => {
+    navigate("/viewprofile", { state: { defaultSelected: true } });
   };
 
   const toggleDropdown = (id) => {
@@ -239,36 +239,41 @@ const SavedCandidate = () => {
   });
 
   return (
-    <div className="saved-candidates-container">
-      <header className="header">
-        <h3 className="saved-candidates-title">Selected Candidates</h3>
-        {/* <p className="saved-candidates-until">
+    <div className="recr_saved-candidates-container">
+      <header className="recr_header">
+        <h3 className="recr_saved-candidates-title">Selected Candidates</h3>
+        {/* <p className="recr_saved-candidates-until">
           All of the candidates are visible until <span>{formattedDate}</span>.
         </p> */}
       </header>
-      <div className="candidate-list">
+      <div className="recr_candidate-list">
         {candidates.map((candidate) => (
-          <div className="candidate-container" key={candidate.id}>
+          <div className="recr_candidate-container" key={candidate.id}>
             <div
-              className="candidate"
+              className="recr_candidate"
               onClick={() => handleCandidateClick(candidate)}
             >
-              <div className="profile-picture"></div>
-              <div className="candidate-details">
+              <div className="recr_profile-picture"></div>
+              <div className="recr_candidate-details">
                 <h3>{candidate.name}</h3>
                 <p>{candidate.role}</p>
               </div>
-              <div className="actions">
-                {/* <button className="bookmark">
+              <div className="recr_actions">
+                {/* <button className="recr_bookmark">
                   <FontAwesomeIcon
                     icon={faBookmark}
-                    className="custom-bookmark-icon"
+                    className="recr_custom-bookmark-icon"
                   />
                 </button> */}
-                <button className="view-profile" onClick={handleViewProfile}>View Profile &rarr;</button>
-                <div className="more-options">
+                <button
+                  className="recr_view-profile"
+                  onClick={handleViewProfile}
+                >
+                  View Profile &rarr;
+                </button>
+                <div className="recr_more-options">
                   <button
-                    className="menu-button"
+                    className="recr_menu-button"
                     onClick={(e) => {
                       e.stopPropagation();
                       toggleDropdown(candidate.id);
@@ -278,7 +283,7 @@ const SavedCandidate = () => {
                   </button>
 
                   {dropdownVisibility[candidate.id] && (
-                    <div className="dropdown">
+                    <div className="recr_dropdown">
                       <button>Send Email</button>
                       <button>Download CV</button>
                     </div>
@@ -291,44 +296,44 @@ const SavedCandidate = () => {
       </div>
 
       {selectedCandidate && (
-        <div className="overlay">
-          <div className="overlay-content">
-            <button className="close-button" onClick={closeOverlay}>
+        <div className="recr_overlay">
+          <div className="recr_overlay-content">
+            <button className="recr_close-button" onClick={closeOverlay}>
               &times;
             </button>
-            <div className="candidate-profile">
-              <p className="candidate-profile-image"></p>
-              <div className="candidate-profile-name">
+            <div className="recr_candidate-profile">
+              <p className="recr_candidate-profile-image"></p>
+              <div className="recr_candidate-profile-name">
                 <h2>{selectedCandidate.name}</h2>
                 <p>{selectedCandidate.role}</p>
               </div>
             </div>
 
-            <div className="candidate-bio-1"></div>
+            <div className="recr_candidate-bio-1"></div>
 
-            <section className="candidate-profile-section">
-              <div classname="candidate-profile-section-1">
-                <div className="candidate-bio">
-                  <h3 className="h3">Biography</h3>
+            <section className="recr_candidate-profile-section">
+              <div classname="recr_candidate-profile-section-1">
+                <div className="recr_candidate-bio">
+                  <h3 className="recr_h3">Biography</h3>
                   <p>{selectedCandidate.biography}</p>
                 </div>
-                <div className="candidate-bio-1"></div>
+                <div className="recr_candidate-bio-1"></div>
 
-                <div className="candidate-coverletter">
-                  <h3 className="h3">Cover Letter</h3>
+                <div className="recr_candidate-coverletter">
+                  <h3 className="recr_h3">Cover Letter</h3>
                   <p>{selectedCandidate.coverLetter}</p>
                 </div>
-                <div className="candidate-bio-1"></div>
-                <div className="candidate-socialmedia">
+                <div className="recr_candidate-bio-1"></div>
+                <div className="recr_candidate-socialmedia">
                   {selectedCandidate.socialMedia?.length > 0 && (
-                    <div className="social-media">
-                      <h3 className="h3">Follow Me</h3>
-                      <div className="social-icons">
+                    <div className="recr_social-media">
+                      <h3 className="recr_h3">Follow Me</h3>
+                      <div className="recr_social-icons">
                         {selectedCandidate.socialMedia.map((social, index) => (
                           <a
                             key={index}
                             href={social.link}
-                            // className={`icon ${social.platform}`}
+                            // className={recr_`icon ${social.platform}`}
                           >
                             {social.platform}
                           </a>
@@ -339,37 +344,37 @@ const SavedCandidate = () => {
                 </div>
               </div>
 
-              <section className="additional-info">
-                {/* <div className="additional-info-1"> */}
-                <div className="info-group">
+              <section className="recr_additional-info">
+                {/* <div className="recr_additional-info-1"> */}
+                <div className="recr_info-group">
                   <h3>DOB</h3>
                   <p>{selectedCandidate.dateOfBirth}</p>
                 </div>
-                <div className="info-group-nation ">
+                <div className="recr_info-group-nation ">
                   <h3>Nationality</h3>
                   <p>{selectedCandidate.nationality}</p>
                 </div>
-                <div className="info-group">
+                <div className="recr_info-group">
                   <h3>Experience</h3>
                   <p>{selectedCandidate.experience} Years</p>
                 </div>
-                <div className="info-group">
+                <div className="recr_info-group">
                   <h3>Education</h3>
                   <p>{selectedCandidate.education}</p>
                 </div>
-                <div className="candidate-bio-1"></div>
+                <div className="recr_candidate-bio-1"></div>
                 {/* </div> */}
-                <div className="Contact-info">
+                <div className="recr_Contact-info">
                   <h3>Contact Information</h3>
                   <ul>
                     <li>
                       Website: {selectedCandidate.website || "Not provided"}
                     </li>
-                    <div className="candidate-bio-1"></div>
+                    <div className="recr_candidate-bio-1"></div>
                     <li>Location: {selectedCandidate.location}</li>
-                    <div className="candidate-bio-1"></div>
+                    <div className="recr_candidate-bio-1"></div>
                     <li>Phone: {selectedCandidate.phone}</li>
-                    <div className="candidate-bio-1"></div>
+                    <div className="recr_candidate-bio-1"></div>
                     <li>Email: {selectedCandidate.email}</li>
                   </ul>
                 </div>

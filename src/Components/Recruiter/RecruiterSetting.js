@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Dashboard.css";
+import "../Recruiter/RecruiterSetting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -47,8 +47,7 @@ const RecruiterSetting = () => {
   const [resumeName, setResumeName] = useState("");
   const [uploadedFile, setUploadedFile] = useState(null);
   const [showAccountEdit, setShowAccountEdit] = useState(false);
-  const [isPrivacyPolicyEnabled, setIsPrivacyPolicyEnabled] = useState(false);
-  const [isResumePrivacyEnabled, setIsResumePrivacyEnabled] = useState(false);
+
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -64,220 +63,6 @@ const RecruiterSetting = () => {
       name: "Luis",
       email: "luis@example.com",
     },
-
-    appliedJobsCount: 20,
-    savedJobsCount: 10,
-    jobAlertsCount: 5,
-    menuItems: [
-      { name: "My Board", icon: "🏠" },
-      { name: "Applied Jobs", icon: "📋" },
-      { name: "Job Suggestions", icon: "🎯" },
-      { name: "Job Alerts", icon: "🔔", count: "(20)" },
-      { name: "Saved Jobs", icon: "💾" },
-      { name: "My Profile", icon: "⚙️" },
-
-      //recuriter side
-
-      { name: "Recruiter Dashboard", icon: "📊" },
-      { name: "Saved Candidate", icon: "📊" },
-      { name: "Job Listings", icon: "📋" },
-      { name: "Interview Schedule", icon: "📅" },
-      { name: "Job Post", icon: "📅" },
-      { name: "Recruiter Setting", icon: "📊" },
-    ],
-
-    recentApplications: [
-      {
-        id: 1,
-        job: "Software Engineer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Remote",
-        location: "New York, USA",
-        salary: "$120,000/year",
-        status: "Active",
-        date: "2024-12-10",
-        action: "View Details",
-      },
-      {
-        id: 2,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Inactive",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-
-      {
-        id: 3,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-
-      {
-        id: 4,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Inactive",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-
-      {
-        id: 5,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 6,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 7,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 8,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 9,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-      {
-        id: 10,
-        job: "Frontend Developer",
-        companyLogo: "https://via.placeholder.com/50",
-        shift: "Hybrid",
-        location: "San Francisco, USA",
-        salary: "$90,000/year",
-        status: "Active",
-        date: "2024-12-12",
-        action: "View Details",
-      },
-    ],
 
     profile: {
       fullName: "John Doe",
@@ -308,44 +93,6 @@ const RecruiterSetting = () => {
     LinkedIn: faLinkedin,
     Instagram: faInstagram,
     default: faLink,
-  };
-
-  const openResumeMenu = (id) => {
-    setActiveResumeMenu((prev) => (prev === id ? null : id));
-  };
-
-  const handleEditResume = (id) => {
-    console.log("Edit resume with ID:", id);
-    setActiveResumeMenu(null);
-  };
-
-  const handleDltResume = (id) => {
-    console.log("Delete resume with ID:", id);
-    setActiveResumeMenu(null);
-  };
-
-  const handleOpenModal = () => {
-    if (userResumes.length >= maxResumes) {
-      setShowUploadResumeModal(false);
-      alert("Maximum number of resumes reached.");
-    } else {
-      setShowUploadResumeModal(true);
-    }
-  };
-
-  const handleCloseModal = () => {
-    setShowUploadResumeModal(false);
-    setResumeName("");
-    setUploadedFile(null);
-  };
-
-  const handleUploadResume = () => {
-    if (!resumeName || !uploadedFile) {
-      alert("Please fill in all fields and upload a file.");
-      return;
-    }
-    console.log("Uploaded:", { resumeName, uploadedFile });
-    handleCloseModal();
   };
 
   const handlePhotoUpload = (event) => {
@@ -384,13 +131,13 @@ const RecruiterSetting = () => {
       case "Personal":
         return (
           <div>
-            <div className="personal-section">
+            <div className="recr_personal-section">
               <h2>Basic Information</h2>
 
-              <div className="personal-section-content">
-                <div className="photo-class">
+              <div className="recr_personal-section-content">
+                <div className="recr_photo-class">
                   <h>Profile Picture</h>
-                  <div className="photo-upload">
+                  <div className="recr_photo-upload">
                     <FontAwesomeIcon icon={faUpload} />
                     <p>
                       <h>Browse photo</h> or drop here (Max: 5MB, PNG/JPEG only)
@@ -398,14 +145,14 @@ const RecruiterSetting = () => {
                     <input
                       type="file"
                       accept="image/png, image/jpeg"
-                      className="photo-input"
+                      className="recr_photo-input"
                       onChange={handlePhotoUpload}
                     />
                   </div>
                 </div>
 
-                <div className="personal-details">
-                  <div className="details-row-row-group">
+                <div className="recr_personal-details">
+                  <div className="recr_details-row-row-group">
                     <div>
                       <label>Full Name</label>
                       <input
@@ -424,7 +171,7 @@ const RecruiterSetting = () => {
                       />
                     </div>
                   </div>
-                  <div className="details-row-row-group">
+                  <div className="recr_details-row-row-group">
                     <div>
                       <label>Experience</label>
                       <select
@@ -437,12 +184,14 @@ const RecruiterSetting = () => {
                         <option>10+ years</option>
                       </select>
 
-                      <label style={{marginTop:"10px"}}>Present Company</label>
+                      <label style={{ marginTop: "10px" }}>
+                        Present Company
+                      </label>
                       <input
                         type="text"
                         defaultValue={dashboardData.profile.company}
                         readOnly={!showProfileEdit}
-                        className="full-width-input"
+                        className="recr_full-width-input"
                       />
                       {/* <select
                         defaultValue={dashboardData.profile.education}
@@ -461,125 +210,30 @@ const RecruiterSetting = () => {
                         type="text"
                         defaultValue={dashboardData.profile.personalWebsite}
                         readOnly={!showProfileEdit}
-                        className="full-width-input"
+                        className="recr_full-width-input"
                       />
-                      <span className="link-icon">🔗</span>
+                      <span className="recr_link-icon">🔗</span>
                     </div>
                   </div>
                 </div>
               </div>
               <button
                 onClick={() => setShowProfileEdit(!showProfileEdit)}
-                className="personal-section-buttons"
+                className="recr_personal-section-buttons"
               >
                 {showProfileEdit ? "Save" : "Edit"}
               </button>
-
-              {/* <div className="resume-section">
-                <h3>Your CV/Resume</h3>
-                <div className="max-resume-info">
-                  <small>Max resumes allowed: {maxResumes}</small>
-                </div>
-
-                <div className="resume-container">
-                  <div
-                    className={`upload-box $userResumes.length >= maxResumes ? "disabled" : ""}`}
-                    onClick={handleOpenModal}
-                  >
-                    <div className="upload-content">
-                      <span className="upload-icon">+</span>
-                      <div>
-                        <p className="big-text">Upload CV/Resume</p>
-                        <p className="small-text">
-                          Browse file or drop here (PDF only)
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                 
-
-                  {dashboardData.resumeData.map((resume) => (
-                    <div key={resume.id} className="resume-item">
-                      <span className="resume-icon">📄</span>
-                      <div className="resume-details">
-                        <p>{resume.title}</p>
-                      </div>
-                      <div
-                        className="resume-menu"
-                        onClick={() => openResumeMenu(resume.id)}
-                      >
-                        ⋮
-                      </div>
-                      {activeResumeMenu === resume.id && (
-                        <div className="resume-menu-dropdown">
-                          <button onClick={() => handleEditResume(resume.id)}>
-                            Edit
-                          </button>
-                          <button onClick={() => handleDltResume(resume.id)}>
-                            Delete
-                          </button>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-                {showUploadResumeModal && (
-                  <div className="modal-overlay">
-                    <div className="upload-resume-modal">
-                      <div className="modal-header">
-                        <h3>Upload Resume</h3>
-                        <button
-                          onClick={handleCloseModal}
-                          className="close-modal-btn"
-                        >
-                          &times;
-                        </button>
-                      </div>
-                      <div className="modal-body">
-                        <label>Resume Name</label>
-                        <input
-                          type="text"
-                          placeholder="Enter Resume Name"
-                          value={resumeName}
-                          onChange={(e) => setResumeName(e.target.value)}
-                        />
-                        <label>Upload CV</label>
-                        <input
-                          type="file"
-                          accept=".pdf"
-                          onChange={(e) => setUploadedFile(e.target.files[0])}
-                        />
-                      </div>
-                      <div className="modal-footer">
-                        <button
-                          onClick={handleCloseModal}
-                          className="cancel-btn"
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          onClick={handleUploadResume}
-                          className="upload-btn"
-                        >
-                          Upload
-                        </button>
-                      </div>
-                    </div>
-                  </div> */}
-                {/* )} */}
-              {/* </div> */}
             </div>
           </div>
         );
 
       case "profile":
         return (
-          <div className="profile-details">
+          <div className="recr_profile-details">
             <h2>Profile Information</h2>
 
             {/* Nationality and Date of Birth */}
-            <div className="profile-details-row">
+            <div className="recr_profile-details-row">
               <div>
                 <label>Nationality</label>
                 <select
@@ -602,7 +256,7 @@ const RecruiterSetting = () => {
             </div>
 
             {/* Gender and Martial Status */}
-            <div className="profile-details-row">
+            <div className="recr_profile-details-row">
               <div>
                 <label>Gender</label>
                 <select
@@ -628,7 +282,7 @@ const RecruiterSetting = () => {
             </div>
 
             {/* Phone and Email */}
-            <div className="profile-details-row">
+            <div className="recr_profile-details-row">
               <div>
                 <label>Phone No</label>
                 <input
@@ -647,27 +301,7 @@ const RecruiterSetting = () => {
               </div>
             </div>
 
-            {/* Current Company and Role */}
-            {/* <div className="profile-details-row">
-              <div>
-                <label>Current Company</label>
-                <input
-                  type="text"
-                  defaultValue={dashboardData.profile.currentCompany}
-                  readOnly={!showProfileEdit}
-                />
-              </div>
-              <div>
-                <label>Current Role</label>
-                <input
-                  type="text"
-                  defaultValue={dashboardData.profile.currentRole}
-                  readOnly={!showProfileEdit}
-                />
-              </div>
-            </div> */}
-
-            <div className="profile-details-row">
+            <div className="recr_profile-details-row">
               <div>
                 <label>Current Location</label>
                 <input
@@ -676,18 +310,10 @@ const RecruiterSetting = () => {
                   readOnly={!showProfileEdit}
                 />
               </div>
-              {/* <div>
-                <label>Notice period in days</label>
-                <input
-                  type="Number"
-                  defaultValue={dashboardData.profile.currentRole}
-                  readOnly={!showProfileEdit}
-                />
-              </div> */}
             </div>
 
             {/* Bio */}
-            <div className="profile-bio">
+            <div className="recr_profile-bio">
               <label>Bio</label>
 
               <textarea
@@ -700,7 +326,7 @@ const RecruiterSetting = () => {
             {/* Edit/Save Button */}
             <button
               onClick={() => setShowProfileEdit(!showProfileEdit)}
-              className="profile-section-buttons"
+              className="recr_profile-section-buttons"
             >
               {showProfileEdit ? "Save" : "Edit"}
             </button>
@@ -708,17 +334,17 @@ const RecruiterSetting = () => {
         );
       case "social":
         return (
-          <div className="social-links-section">
+          <div className="recr_social-links-section">
             <h2>Social Links</h2>
 
             {socialLinks.map((social, index) => (
-              <div className="social-link-row" key={index}>
-                <div className="social-platform">
+              <div className="recr_social-link-row" key={index}>
+                <div className="recr_social-platform">
                   <FontAwesomeIcon
                     icon={
                       platformIcons[social.platform] || platformIcons.default
                     }
-                    className="platform-icon"
+                    className="recr_platform-icon"
                   />
                   <select
                     value={social.platform}
@@ -733,7 +359,7 @@ const RecruiterSetting = () => {
                     <option value="Instagram">Instagram</option>
                   </select>
                 </div>
-                <div className="social-url">
+                <div className="recr_social-url">
                   <input
                     type="text"
                     placeholder="Profile link/URL"
@@ -741,11 +367,11 @@ const RecruiterSetting = () => {
                     onChange={(e) =>
                       handleInputChange(index, "link", e.target.value)
                     }
-                    className="social-url-input"
+                    className="recr_social-url-input"
                   />
 
                   <button
-                    className="social-remove-btn"
+                    className="recr_social-remove-btn"
                     onClick={() => handleRemoveLink(index)}
                   >
                     <span style={{ backgroundColor: "white" }}>✖️</span>
@@ -754,30 +380,33 @@ const RecruiterSetting = () => {
               </div>
             ))}
 
-            <button className="add-social-link-btn" onClick={handleAddNewLink}>
+            <button
+              className="recr_add-social-link-btn"
+              onClick={handleAddNewLink}
+            >
               + Add New Social Link
             </button>
 
-            <div className="action-buttons">
-              <button className="social-save-btn">Save</button>
+            <div className="recr_action-buttons">
+              <button className="recr_social-save-btn">Save</button>
             </div>
           </div>
         );
 
       case "account":
         return (
-          <div className="account-settings-section">
+          <div className="recr_account-settings-section">
             <h2>Contact Info</h2>
 
             {/* Address Section */}
-            <div className="account-input-container">
+            <div className="recr_account-input-container">
               <label>Address</label>
-              <div className="account-input-box">
+              <div className="recr_account-input-box">
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                 <input
                   type="text"
                   placeholder="Enter your Address"
-                  className="account-full-width"
+                  className="recr_account-full-width"
                   // defaultValue={dashboardData.account.address}
                   readOnly={!showAccountEdit}
                 />
@@ -785,12 +414,12 @@ const RecruiterSetting = () => {
             </div>
 
             {/* Phone Section */}
-            <div className="account-input-container">
+            <div className="recr_account-input-container">
               <label>Phone</label>
-              <div className="account-input-box">
+              <div className="recr_account-input-box">
                 <FontAwesomeIcon icon={faPhone} />
                 <select
-                  className="account-country-dropdown"
+                  className="recr_account-country-dropdown"
                   disabled={!showAccountEdit}
                   // defaultValue={dashboardData.account.phoneCountry}
                 >
@@ -800,7 +429,7 @@ const RecruiterSetting = () => {
                 <input
                   type="text"
                   placeholder="Enter phone number"
-                  className="account-full-width"
+                  className="recr_account-full-width"
                   // defaultValue={dashboardData.account.phone}
                   readOnly={!showAccountEdit}
                 />
@@ -808,173 +437,43 @@ const RecruiterSetting = () => {
             </div>
 
             {/* Email Section */}
-            <div className="account-input-container">
+            <div className="recr_account-input-container">
               <label>Email</label>
-              <div className="account-input-box">
+              <div className="recr_account-input-box">
                 <FontAwesomeIcon icon={faEnvelope} />
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="account-full-width"
+                  className="recr_account-full-width"
                   // defaultValue={dashboardData.account.email}
                   readOnly={!showAccountEdit}
                 />
               </div>
-
-              {/* <div className="job-alerts-section">
-               
-
-                <div className="job-alerts-container">
-                 
-                  <div className="job-alerts-input-container">
-                    <div className="job-input-box">
-                      <FontAwesomeIcon icon={faBriefcase} />
-                      <input
-                        type="text"
-                        placeholder="Enter your desired role"
-                        className="job-input"
-                        
-                        readOnly={!showAccountEdit}
-                      />
-                    </div>
-
-                    <div className="job-input-box">
-                      <FontAwesomeIcon icon={faLocationDot} />
-                      <input
-                        type="text"
-                        placeholder="Enter preferred location"
-                        className="job-input"
-                        
-                        readOnly={!showAccountEdit}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div> */}
             </div>
 
             {/* Edit/Save Button */}
             <button
               onClick={() => setShowAccountEdit(!showAccountEdit)}
-              className="account-section-buttons"
+              className="recr_account-section-buttons"
             >
               {showAccountEdit ? "Save" : "Edit"}
             </button>
 
-            {/* <div className="notification-settings-container">
-              <h2>Notifications</h2>
-              <div className="notification-checkbox-row">
-                <div className="checkbox-container">
-                  <input type="checkbox" id="checkbox1" />
-                  <label htmlFor="checkbox1">
-                    Notify me when employers shortlist me
-                  </label>
-                </div>
-                <div
-                  className="checkbox-container"
-                  style={{ marginLeft: "50px" }}
-                >
-                  <input type="checkbox" id="checkbox2" />
-                  <label htmlFor="checkbox2">
-                    Notify me when my applied job expires
-                  </label>
-                </div>
-              </div>
-
-              
-              <div className="notification-checkbox-row">
-                <div className="checkbox-container">
-                  <input type="checkbox" id="checkbox3" />
-                  <label htmlFor="checkbox3">
-                    Notify me when I have 3 job alerts
-                  </label>
-                </div>
-                <div
-                  className="checkbox-container"
-                  style={{ marginLeft: "90px" }}
-                >
-                  <input type="checkbox" id="checkbox4" />
-                  <label htmlFor="checkbox4">
-                    Notify me when employers save my profile
-                  </label>
-                </div>
-              </div>
-
-              <div className="notification-checkbox-row">
-                <div className="checkbox-container">
-                  <input type="checkbox" id="checkbox5" />
-                  <label htmlFor="checkbox5">
-                    Notify me when employers reject me
-                  </label>
-                </div>
-              </div>
-            </div> */}
-
-            {/* <div className="privacy-settings-section">
-              <h2>Privacy Settings</h2>
-
-              <div className="privacy-settings-container">
-                
-                <div className="privacy-item">
-                  <label>Privacy Policy</label>
-                  <div className="Settings-toggle-container">
-                    <label className="switch">
-                      <input
-                        type="checkbox"
-                        checked={isPrivacyPolicyEnabled}
-                        onChange={() =>
-                          setIsPrivacyPolicyEnabled(!isPrivacyPolicyEnabled)
-                        }
-                      />
-                      <span className="slider"></span>
-                    </label>
-                    <span className="toggle-text">
-                      {isPrivacyPolicyEnabled
-                        ? "Your Profile Is Public Now"
-                        : "Your Profile Is Private "}
-                    </span>
-                  </div>
-                </div>
-
-                
-                <div className="privacy-item">
-                  <label>Resume Privacy</label>
-                  <div className="Settings-toggle-container">
-                    <label className="switch">
-                      <input
-                        type="checkbox"
-                        checked={isResumePrivacyEnabled}
-                        onChange={() =>
-                          setIsResumePrivacyEnabled(!isResumePrivacyEnabled)
-                        }
-                      />
-                      <span className="slider"></span>
-                    </label>
-                    <span className="toggle-text">
-                      {isResumePrivacyEnabled
-                        ? "Your Resume Is Visible To Recruiter "
-                        : "Your Resume Is Hidden From All"}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-            <div className="password-change-section">
+            <div className="recr_password-change-section">
               <h2>Change Password</h2>
 
-              <div className="password-change-container">
+              <div className="recr_password-change-container">
                 {/* Current Password */}
-                <div className="password-input-container">
+                <div className="recr_password-input-container">
                   <label>Current Password</label>
-                  <div className="password-input-box">
+                  <div className="recr_password-input-box">
                     <input
                       type={showCurrentPassword ? "text" : "password"}
                       placeholder="Enter current password"
-                      className="account-full-width"
+                      className="recr_account-full-width"
                     />
                     <span
-                      className="password-eye-icon"
+                      className="recr_password-eye-icon"
                       onClick={() =>
                         setShowCurrentPassword(!showCurrentPassword)
                       }
@@ -985,16 +484,16 @@ const RecruiterSetting = () => {
                 </div>
 
                 {/* New Password */}
-                <div className="password-input-container">
+                <div className="recr_password-input-container">
                   <label>New Password</label>
-                  <div className="password-input-box">
+                  <div className="recr_password-input-box">
                     <input
                       type={showNewPassword ? "text" : "password"}
                       placeholder="Enter new password"
-                      className="account-full-width"
+                      className="recr_account-full-width"
                     />
                     <span
-                      className="password-eye-icon"
+                      className="recr_password-eye-icon"
                       onClick={() => setShowNewPassword(!showNewPassword)}
                     >
                       {showNewPassword ? "👁" : "👁‍🗨"}
@@ -1003,16 +502,16 @@ const RecruiterSetting = () => {
                 </div>
 
                 {/* Confirm Password */}
-                <div className="password-input-container">
+                <div className="recr_password-input-container">
                   <label>Confirm Password</label>
-                  <div className="password-input-box">
+                  <div className="recr_password-input-box">
                     <input
                       type={showConfirmPassword ? "text" : "password"}
                       placeholder="Re-enter new password"
-                      className="account-full-width"
+                      className="recr_account-full-width"
                     />
                     <span
-                      className="password-eye-icon"
+                      className="recr_password-eye-icon"
                       onClick={() =>
                         setShowConfirmPassword(!showConfirmPassword)
                       }
@@ -1024,20 +523,20 @@ const RecruiterSetting = () => {
               </div>
 
               {/* Save Button */}
-              <button className="account-section-buttons">Save</button>
+              <button className="recr_account-section-buttons">Save</button>
             </div>
 
-            <div className="dlt-settings-section">
+            <div className="recr_dlt-settings-section">
               <h2>Delete Your Account</h2>
-              <div className="delete-account-section">
-                <p className="delete-account-warning">
+              <div className="recr_delete-account-section">
+                <p className="recr_delete-account-warning">
                   If you delete your account, you will no longer be able to get
                   information about the matched jobs, following employers, job
                   alerts, shortlisted jobs, and more. You will be abandoned from
                   all the services of <strong>The Datanauts</strong>.
                 </p>
 
-                <button className="delete-account-button">
+                <button className="recr_delete-account-button">
                   × Delete Account
                 </button>
               </div>
@@ -1046,23 +545,23 @@ const RecruiterSetting = () => {
         );
 
       default:
-        return <div className="tab-content">Select a setting</div>;
+        return <div className="recr_tab-content">Select a setting</div>;
     }
   };
 
   return (
-    <div className="idontknow">
-      <div className="applied-jobs">
+    <div className="recr_idontknow">
+      <div className="recr_applied-jobs">
         <h2>Settings </h2>
-        <div className="settings-container">
-          <header className="settings-header">
+        <div className="recr_settings-container">
+          <header className="recr_settings-header">
             <div
               className={`settings-tab ${
                 activeTab === "personal" ? "active" : ""
               }`}
               onClick={() => setActiveTab("Personal")}
             >
-              <span className="settings-icon">👤</span> Personal
+              <span className="recr_settings-icon">👤</span> Personal
             </div>
 
             <div
@@ -1071,7 +570,7 @@ const RecruiterSetting = () => {
               }`}
               onClick={() => setActiveTab("profile")}
             >
-              <span className="settings-icon">🧑</span> Profile
+              <span className="recr_settings-icon">🧑</span> Profile
             </div>
 
             <div
@@ -1080,7 +579,7 @@ const RecruiterSetting = () => {
               }`}
               onClick={() => setActiveTab("social")}
             >
-              <span className="settings-icon">🌐</span> Social
+              <span className="recr_settings-icon">🌐</span> Social
             </div>
             <div
               className={`settings-tab ${
@@ -1088,11 +587,13 @@ const RecruiterSetting = () => {
               }`}
               onClick={() => setActiveTab("account")}
             >
-              <span className="settings-icon">🔒</span> Account Settings
+              <span className="recr_settings-icon">🔒</span> Account Settings
             </div>
           </header>
 
-          <main className="settings-content">{renderSettingsContent()}</main>
+          <main className="recr_settings-content">
+            {renderSettingsContent()}
+          </main>
         </div>
       </div>
     </div>

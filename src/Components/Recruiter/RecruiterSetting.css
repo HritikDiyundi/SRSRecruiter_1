@@ -1,0 +1,786 @@
+html,
+body {
+    overflow: hidden;
+}
+
+
+
+.recr_settings-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* height: 60px; */
+    background: #f9f9f9;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    /* transition: transform 0.recr_3s ease-in-out; */
+}
+
+.recr_settings-tab {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.recr_3s;
+}
+
+.recr_settings-tab.recr_active {
+    background-color: rgba(0, 0, 255, 0.recr_1);
+    font-weight: bold;
+}
+
+.recr_settings-tab:hover {
+    background-color: rgba(0, 0, 0, 0.recr_1);
+}
+
+.recr_settings-icon {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.recr_recent-applications {
+    margin-top: 30px;
+    max-height: 400px;
+    /* flex-grow: 1; */
+    overflow-y: auto;
+}
+
+.recr_settings-content {
+    padding: 20px;
+
+    max-height: 400px;
+    /* flex-grow: 1; */
+    overflow-y: auto;
+}
+
+
+
+.recr_settings-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.recr_recent-applications::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* .recr_tab-content {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.recr_1);
+} */
+
+.recr_personal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 10px; */
+}
+
+.recr_personal-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recr_personal-section-content h {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.recr_personal-section-content {
+    display: flex;
+
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.recr_photo-upload {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted #ccc;
+    border-radius: 10px;
+    width: 175px;
+    height: 175px;
+    text-align: center;
+    padding: 10px;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.recr_photo-upload p {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.recr_photo-input {
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    opacity: 0;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.recr_photo-upload:hover {
+    border-color: #1282a2;
+    color: #1282a2;
+}
+
+.recr_personal-details {
+    flex-grow: 1;
+}
+
+.recr_personal-details {
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.recr_personal-details h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recr_details-row-row-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.recr_details-row-row-group>div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.recr_details-row-row-group>div:last-child {
+    margin-right: 0;
+}
+
+.recr_details-row-row-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.recr_details-row-row-group input,
+.recr_details-row-row-group select {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.recr_details-row {
+    margin-bottom: 20px;
+}
+
+.recr_details-row label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.recr_details-row select {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recr_full-width-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.recr_full-width-input+.recr_link-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: -30px;
+    /* Adjust based on your icon size */
+    cursor: pointer;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.recr_personal-section-buttons {
+    display: block;
+    margin: 0 0 0 calc(175px + 40px);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.recr_personal-section-buttons:hover {
+    background-color: #0056b3;
+}
+
+
+.recr_upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.recr_upload-box:hover {
+    border-color: #1282a2;
+    color: #1282a2;
+}
+
+.recr_upload-box.recr_disabled {
+    cursor: not-allowed;
+    border-color: #ddd;
+    color: #ddd;
+}
+
+.recr_upload-content {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    color: #666;
+}
+
+.recr_big-text {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.recr_upload-icon {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+
+.recr_profile-details {
+    /* padding: 20px; */
+}
+
+.recr_profile-details h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recr_profile-details-row-row-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.recr_profile-details-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.recr_profile-details-row div {
+    width: 45%;
+}
+
+.recr_profile-details-row label {
+    font-weight: bold;
+}
+
+.recr_profile-details-row select,
+.recr_profile-details-row input,
+.recr_profile-details-row textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.recr_profile-bio {
+    display: flex;
+    flex-direction: column;
+}
+
+.recr_profile-bio label {
+    font-weight: bold;
+}
+
+.recr_profile-bio textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.recr_profile-section-buttons {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recr_profile-section-buttons:hover {
+    background-color: #0056b3;
+}
+
+.recr_social-links-section {
+    /* padding: 20px; */
+}
+
+.recr_social-links-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recr_social-link-row {
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.recr_social-platform {
+    display: flex;
+    align-items: center;
+}
+
+.recr_platform-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #555;
+}
+
+.recr_social-platform select {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.recr_social-url {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.recr_social-url-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.recr_social-url input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.recr_social-remove-btn {
+    background-color: #1282a2;
+    border: none;
+    font-size: 16px;
+    padding: 2px;
+    border-radius: 5px;
+    /* color: white; */
+    cursor: pointer;
+    /* margin-left: 10px; */
+}
+
+.recr_social-remove-btn span {
+    color: white;
+}
+
+.recr_add-social-link-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #1282a2;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.recr_add-social-link-btn .recr_social-remove-btn:hover {
+    background-color: #0a6378;
+}
+
+.recr_action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recr_social-save-btn {
+    /* background-color: #4caf50; */
+    /* color: #fff; */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recr_social-save-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Account Settings Section */
+
+/* Account Settings Section */
+.recr_account-settings-section {
+    /* font-family: Arial, sans-serif; */
+    /* padding: 20px; */
+}
+
+.recr_account-settings-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Container */
+.recr_account-input-container {
+    margin-bottom: 20px;
+}
+
+/* Full-width Input Box */
+.recr_account-full-width {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Input Box with Icon */
+.recr_account-input-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.recr_account-input-box input,
+.recr_account-input-box select {
+    padding-left: 40px;
+    /* Space for the icon */
+}
+
+.recr_account-input-box .recr_fa {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Country Dropdown */
+.recr_account-country-dropdown {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.recr_account-input-box .recr_fa-location-dot,
+.recr_account-input-box .recr_fa-phone,
+.recr_account-input-box .recr_fa-envelope {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    color: #888;
+}
+
+.recr_account-section-buttons {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.recr_3s ease;
+}
+
+.recr_account-section-buttons:hover {
+    background-color: #0056b3;
+}
+
+.recr_account-section-buttons:focus {
+    outline: none;
+}
+
+.recr_notification-settings-container {
+    margin-top: 30px;
+}
+
+.recr_notification-checkbox-row {
+    display: flex;
+    justify-content: flex-start;
+    /* Align the items from the start */
+    gap: 20px;
+    /* Ensure consistent gap between each checkbox-label pair */
+    margin-bottom: 10px;
+}
+
+.recr_checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.recr_checkbox-container input {
+    margin-right: 10px;
+    accent-color: #1282a2;
+    /* Custom checkbox color */
+}
+
+.recr_checkbox-container label {
+    font-size: 14px;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+@media (max-width: 768px) {
+    .recr_notification-checkbox-row {
+        flex-direction: column;
+        /* Stack checkboxes vertically on small screens */
+        align-items: flex-start;
+        /* Align items to the start for mobile view */
+    }
+
+    .recr_checkbox-container {
+        margin-bottom: 10px;
+        /* Add spacing between checkboxes on mobile */
+    }
+}
+
+.recr_job-alerts-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.recr_job-alerts-input-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.recr_job-input-box {
+    position: relative;
+    flex: 1;
+}
+
+.recr_job-input-box input {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 35px;
+}
+
+.recr_job-input-box .recr_fa-briefcase,
+.recr_job-input-box .recr_fa-location-dot {
+    position: absolute;
+    left: 10px;
+    font-size: 16px;
+    color: #888;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.recr_job-alerts-section-button {
+    padding: 10px 20px;
+    background-color: #1282a2;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recr_job-alerts-section-button:hover {
+    background-color: #0f6b85;
+}
+
+.recr_job-alerts-section-button:focus {
+    outline: none;
+}
+
+/* .recr_privacy-settings-section{
+  display: flex;
+  flex-direction: column;
+} */
+.recr_privacy-settings-section {
+    margin-top: 30px;
+}
+
+.recr_privacy-settings-container {
+    margin-top: 20px;
+}
+
+.recr_privacy-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recr_Settings-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    /* position: absolute; */
+    /* top: 0;
+  left: 50%; */
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.recr_6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+
+
+.recr_toggle-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.recr_password-change-section {
+    margin-top: 30px;
+}
+
+.recr_password-change-container {
+    margin-top: 20px;
+}
+
+
+.recr_password-input-container {
+    margin-bottom: 20px;
+}
+
+.recr_password-input-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.recr_password-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.recr_password-input-box input {
+    width: 100%;
+    padding: 10px 35px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.recr_password-eye-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+}
+
+
+
+.recr_dlt-settings-section {
+    margin-top: 30px;
+}
+
+.recr_delete-account-section {
+    margin-top: 20px;
+}
+
+.recr_delete-account-warning {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.recr_6;
+    margin-bottom: 15px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+.recr_delete-account-button {
+    background-color: transparent;
+    color: red;
+    /* padding: 10px 20px; */
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    /* border-radius: 4px; */
+    cursor: pointer;
+    text-align: left;
+    /* Align button to the left */
+}
+
+.recr_delete-account-button:hover {
+    color: #c9302c;
+}

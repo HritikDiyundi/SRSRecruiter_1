@@ -3,7 +3,6 @@ import "./RecruiterJobCard.css";
 import Modal from "../../ModalComponent/Modal";
 import { useNavigate } from "react-router-dom";
 
-
 const RecruiterJobCard = ({
   jobTitle,
   type,
@@ -18,10 +17,9 @@ const RecruiterJobCard = ({
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const[isNewPage, setIsNewPage] =useState(false)
+  const [isNewPage, setIsNewPage] = useState(false);
 
-  const navigate=useNavigate();
- 
+  const navigate = useNavigate();
 
   const handleViewApplicants = () => {
     setIsModalOpen(true);
@@ -33,11 +31,11 @@ const RecruiterJobCard = ({
   // }
 
   const handleViewProfile = (applicants) => {
-    navigate(`/viewprofile/`, { state: { 
-      applicants,
-      
-     },
-     });
+    navigate(`/viewprofile/`, {
+      state: {
+        applicants,
+      },
+    });
   };
   const closeModal = () => {
     setIsModalOpen(false);
@@ -52,33 +50,40 @@ const RecruiterJobCard = ({
       <tr>
         {/* Job Details */}
         <td>
-          <div className="Employe-job-details">
-            <p className="Employe_job_title">{jobTitle}</p>
-            <span className="Employe_job_dur">
+          <div className="recr_Employe-job-details">
+            <p className="recr_Employe_job_title">{jobTitle}</p>
+            <span className="recr_Employe_job_dur">
               {type} • {daysRemaining}
             </span>
           </div>
         </td>
 
         {/* Job Status */}
-        <td className={`status ${expired ? "expired" : "active"}`}>{status}</td>
+        <td className={`recr_status ${expired ? "expired" : "active"}`}>
+          {status}
+        </td>
 
         {/* Applications Count */}
         <td>{applications} Applications</td>
 
         {/* Actions */}
         <td>
-          <div className="more-options">
-            <button className="view-applications" onClick={handleViewApplicants}>View Applicants</button>
+          <div className="recr_more-options">
+            <button
+              className="recr_view-applications"
+              onClick={handleViewApplicants}
+            >
+              View Applicants
+            </button>
 
             {/* Menu Button */}
-            {/* <button className="menu-button" onClick={toggleDropdown}>
+            {/* <button className="recr_menu-button" onClick={toggleDropdown}>
             ⋮
           </button> */}
 
             {/* Dropdown Menu */}
             {/* {isDropdownVisible && (
-            <div className="dropdown">
+            <div className="recr_dropdown">
               <button>Send Email</button>
               <button>Download CV</button>
             </div>
@@ -105,7 +110,9 @@ const RecruiterJobCard = ({
                 <td>{applicant.experience}</td>
                 <td>{applicant.job}</td>
                 <td>
-                  <button onClick={()=>handleViewProfile(applicants)}>View Profile</button>
+                  <button onClick={() => handleViewProfile(applicants)}>
+                    View Profile
+                  </button>
                 </td>
               </tr>
             ))}

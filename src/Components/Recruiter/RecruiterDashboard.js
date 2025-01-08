@@ -30,8 +30,7 @@ const RecruiterDashboard = () => {
           address: "25 Green Road, London, UK",
           phone: "+44-20-1234-5678",
           logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
-          resumeName:"LiamB_DevOps.pdf",
-          
+          resumeName: "LiamB_DevOps.pdf",
         },
       ],
     },
@@ -57,8 +56,7 @@ const RecruiterDashboard = () => {
           address: "25 Green Road, London, UK",
           phone: "+44-20-1234-5678",
           logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
-          resumeName:"LiamB_DevOps.pdf",
-          
+          resumeName: "LiamB_DevOps.pdf",
         },
       ],
     },
@@ -84,8 +82,7 @@ const RecruiterDashboard = () => {
           address: "25 Green Road, London, UK",
           phone: "+44-20-1234-5678",
           logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
-          resumeName:"LiamB_DevOps.pdf",
-          
+          resumeName: "LiamB_DevOps.pdf",
         },
       ],
     },
@@ -111,8 +108,7 @@ const RecruiterDashboard = () => {
           address: "25 Green Road, London, UK",
           phone: "+44-20-1234-5678",
           logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
-          resumeName:"LiamB_DevOps.pdf",
-          
+          resumeName: "LiamB_DevOps.pdf",
         },
       ],
     },
@@ -139,41 +135,40 @@ const RecruiterDashboard = () => {
           address: "25 Green Road, London, UK",
           phone: "+44-20-1234-5678",
           logo: "https://via.placeholder.com/100/1282A2/FFFFFF?text=TechCorp",
-          resumeName:"LiamB_DevOps.pdf",
-          
+          resumeName: "LiamB_DevOps.pdf",
         },
       ],
     },
   ];
 
   return (
-    // <div className="dashboard-container">
-    <div className="main-content">
+    // <div className="recr_dashboard-container">
+    <div className="recr_main-content">
       {/* <Header /> */}
-      <div className="overview">
-        <p className="overview_greeting">Hello, !</p>
+      <div className="recr_overview">
+        <p className="recr_overview_greeting">Hello, !</p>
         {/* {dashboardData.user?.name || "User"} */}
-        <p className="overview_greeting_sub">
+        <p className="recr_overview_greeting_sub">
           Here is your daily activities and applications
         </p>
-        <div className="stats">
-          <div className="stat-1">
+        <div className="recr_stats">
+          <div className="recr_stat-1">
             <div>
               <h3>589</h3>
               <span>Open Jobs</span>
             </div>
-            <p className="stat_icon">👜</p>
+            <p className="recr_stat_icon">👜</p>
           </div>
-          <div className="stat-2">
+          <div className="recr_stat-2">
             <div>
               <h3>2,517</h3>
               <span>Saved Candidates</span>
             </div>
-            <p className="stat_icon">📟</p>
+            <p className="recr_stat_icon">📟</p>
           </div>
         </div>
       </div>
-      <div className="jobs">
+      <div className="recr_jobs">
         <div
           style={{
             display: "flex",
@@ -185,7 +180,7 @@ const RecruiterDashboard = () => {
             Recent Posted Jobs
           </h3>
           <button
-            className=""
+            className="recr_"
             style={{}}
             // onClick={() => setActiveMenu("Applied Jobs")}
           >
@@ -193,9 +188,9 @@ const RecruiterDashboard = () => {
           </button>
         </div>
 
-        <table className="jobs-table">
+        <table className="recr_jobs-table">
           {/* <thead>
-            <tr className="jobs-table-titles">
+            <tr className="recr_jobs-table-titles">
               <th>Jobs</th>
               <th>Status</th>
               <th>Applications</th>

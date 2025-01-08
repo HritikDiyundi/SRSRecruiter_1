@@ -15,7 +15,7 @@ body {
 }
 
 
-.overview_greeting{
+.recr_overview_greeting{
     font-size: medium;
     font-weight: 500;
     margin-bottom: 15px;
@@ -23,42 +23,42 @@ body {
     
 }
 
-.overview_greeting_sub{
+.recr_overview_greeting_sub{
     font-size: small;
     color: rgb(144, 144, 144);
 }
 
-.dashboard-container {
+.recr_dashboard-container {
     display: flex;
     height: 100vh;
 }
 
 /* Main Content */
-.main-content {
+.recr_main-content {
     flex-direction: column;
     flex-grow: 1;
     /* padding: 20px; */
 
 }
 
-.main-content::-webkit-scrollbar {
+.recr_main-content::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
 
-.overview {
+.recr_overview {
     display: flex;
     flex-direction: column;
 }
 
 /* Statistics Section */
-.stats {
+.recr_stats {
     display: flex;
     gap: 20px;
     padding: 20px;
 }
 
-.stat-1 {
+.recr_stat-1 {
     display: flex;
     flex-direction: row;
     background-color: #e7f0fa;
@@ -67,7 +67,7 @@ body {
     text-align: center;
 }
 
-.stat-2 {
+.recr_stat-2 {
     display: flex;
     flex-direction: row;
     background-color: #fff6e6;
@@ -77,7 +77,7 @@ body {
 }
 
 
-.stat_icon{
+.recr_stat_icon{
     padding: 15px;
     margin-left: 100px;
     font-size:x-large;
@@ -85,24 +85,22 @@ body {
     border-radius: 10px;
 }
 
-.stat-1 h3, .stat-2 h3 {
+.recr_stat-1 h3, .recr_stat-2 h3 {
     font-size: 24px;
     color: #000000;
     font-weight: 500;
 }
 
-.stat span {
+.recr_stat span {
 
     color: #2a2a2a;
     font-size: small;
 }
 
 /* Job List Heading */
-.jobs h3 {
-    /* margin: 20px 0; */
-}
 
-.jobs {
+
+.recr_jobs {
     max-height: 400px;
     /* Set maximum height for the jobs table */
     overflow-y: scroll;
@@ -119,7 +117,7 @@ body {
 }
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
-.jobs::-webkit-scrollbar {
+.recr_jobs::-webkit-scrollbar {
     width: 0;
     /* Remove the scrollbar width */
     background: transparent;
@@ -127,13 +125,13 @@ body {
 }
 
 /* Hide scrollbar for Firefox */
-.jobs {
+.recr_jobs {
     scrollbar-width: none;
     /* Firefox-specific */
 }
 
 /* Preserve the table header while scrolling */
-.jobs-table {
+.recr_jobs-table {
     width: 100%;
     /* Ensure table takes full width */
     border-collapse: collapse;
@@ -141,15 +139,15 @@ body {
     /* Reset margins for consistent spacing */
 }
 
-.jobs-table th,
-.jobs-table td {
+.recr_jobs-table th,
+.recr_jobs-table td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
     /* Add borders for rows */
 }
 
-.jobs-table th {
+.recr_jobs-table th {
     position: sticky;
     /* Make headers stick while scrolling */
     top: 0;
