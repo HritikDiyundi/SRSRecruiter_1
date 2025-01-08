@@ -6,7 +6,7 @@ import SavedCandidate from "./Recruiter/SavedCandidate.js";
 import RecruiterSetting from "./Recruiter/RecruiterSetting.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
-import InterviewScheduler from "./Recruiter/IntervieweScheduler.js";
+import InterviewScheduler from "./Recruiter/SavedCandidatesPage.js";
 
 import {
   faMapMarkerAlt,
@@ -33,6 +33,8 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core";
+import SavedCandidatesPage from "./Recruiter/SavedCandidatesPage.js";
+import DraftedJobs from "./DraftedJobs.js";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -76,13 +78,14 @@ export default function Dashboard() {
       //recuriter side
 
       { name: "Recruiter Dashboard", icon: "🏠" },
-      { name: "Job Post", icon: "📋" },
+      { name: "Post Job", icon: "📋" },
       { name: "Posted Jobs", icon: "🎯" },
-      { name: "Selected Candidates", icon: "💾" },
-      { name: "Interview Schedule", icon: "📅" },
+      { name: "Selected Candidates", icon: "📅" },
+      // { name: "Interview Schedule", icon: "" },
       { name: "Saved Candidates", icon: "💾" },
-      { name: "Recruiter Setting", icon: "⚙️" },
       { name: "Drafted Jobs", icon: "📋" },
+      { name: "Recruiter Setting", icon: "⚙️" },
+      
     ],
 
     recentApplications: [
@@ -1510,10 +1513,12 @@ export default function Dashboard() {
         return <SavedCandidate />;
       case "Posted Jobs":
         return <JobListing />;
-      case "Interview Schedule":
-        return <InterviewScheduler />;
-      case "Job Post":
+      case "Saved Candidates":
+        return <SavedCandidatesPage />;
+      case "Post Job":
         return <JobPost />;
+        case "Drafted Jobs":
+          return <DraftedJobs />;
 
       case "Recruiter Setting":
         return <RecruiterSetting />;

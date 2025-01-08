@@ -1,247 +1,259 @@
-.job-post-container{
-    max-height: 80vh;
-    overflow-y: auto;
+.job-post-container {
+  max-height: 80vh;
+  overflow-y: auto;
 }
-.job-post-container::-webkit-scrollbar{
-    height: 0;
-    width: 0;
+.job-post-container::-webkit-scrollbar {
+  height: 0;
+  width: 0;
 }
 form {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 5px;
-    /* border: 1px solid #ddd; */
-    /* border-radius: 8px; */
-    /* background-color: #f9f9f9; */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    /* font-family: Arial, Helvetica, sans-serif; */
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 5px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* background-color: #f9f9f9; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 h2,
 h3 {
-    font-size: 1rem;
-    /* Slightly smaller than before for a more refined look */
-    color: #000000;
-    /* Soft gray color */
-    margin-bottom: 10px;
-    /* Space below heading */
-    font-weight: 300;
-    /* Normal weight with some emphasis */
-    letter-spacing: 0.5px;
-    /* Slight letter spacing */
-    font-family: 'Roboto', sans-serif;
-    /* Clean and modern font family */
-    text-transform: capitalize;
-    /* First letter of each word capitalized */
+  font-size: 1rem;
+  /* Slightly smaller than before for a more refined look */
+  color: #000000;
+  /* Soft gray color */
+  margin-bottom: 10px;
+  /* Space below heading */
+  font-weight: 300;
+  /* Normal weight with some emphasis */
+  letter-spacing: 0.5px;
+  /* Slight letter spacing */
+  font-family: "Roboto", sans-serif;
+  /* Clean and modern font family */
+  text-transform: capitalize;
+  /* First letter of each word capitalized */
 }
 
 label {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    color: #000000;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #000000;
 }
 
 label input,
 label select {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 0.8rem;
-    /* Smaller text size for input data */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-    background-color: #fff;
-    color: #2c2c2c;
-    /* Light gray text color */
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8rem;
+  /* Smaller text size for input data */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #fff;
+  color: #2c2c2c;
+  /* Light gray text color */
 }
 
 /* Placeholder styles */
 label input::placeholder,
 label select::placeholder {
-    font-size: 0.8rem;
-    /* Placeholder text size */
-    color: #bbb;
-    /* Lighter color for placeholder */
+  font-size: 0.8rem;
+  /* Placeholder text size */
+  color: #bbb;
+  /* Lighter color for placeholder */
 }
 
 /* Focused input/select field */
 label input:focus,
 label select:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .react-quill {
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 0.8rem;
-    /* Smaller text inside the Quill editor */
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 0.8rem;
+  /* Smaller text inside the Quill editor */
 }
-
-
 
 /* Styling for salary section, same font size and light text */
 .salary-row input,
 .salary-row select {
-    font-size: 0.8rem;
-    color: #777;
+  font-size: 0.8rem;
+  color: #777;
 }
 
 .salary-row input::placeholder,
 .salary-row select::placeholder {
-    font-size: 0.8rem;
-    color: #bbb;
-    /* Lighter placeholder color */
+  font-size: 0.8rem;
+  color: #bbb;
+  /* Lighter placeholder color */
 }
 
 /* Styling for advanced info section, light color and smaller font */
 .advanced-info label {
-    font-size: 0.8rem;
-    /* Small font size for labels */
-    color: #777;
-    /* Lighter text color */
+  font-size: 0.8rem;
+  /* Small font size for labels */
+  color: #777;
+  /* Lighter text color */
 }
 
 .advanced-info select,
 .advanced-info input {
-    font-size: 0.8rem;
-    color: #777;
-    /* Light text color for input/select */
+  font-size: 0.8rem;
+  color: #777;
+  /* Light text color for input/select */
 }
 
 .title_tags {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .title_tags_role {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    /* Space between items */
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* Space between items */
+  margin-bottom: 15px;
 }
 
 .title_tags_role label {
-    flex: 3;
+  flex: 3;
 }
 
 .title_tags_role .job-role {
-    flex: 1;
+  flex: 1;
 }
 
 .salary-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    /* Space between elements */
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* Space between elements */
+  margin-bottom: 15px;
 }
 
 .salary-input {
-    flex: 1;
-    /* Equal width for salary inputs */
+  flex: 1;
+  /* Equal width for salary inputs */
 }
 
 .input-group {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .input-group input {
-    flex: 2;
-    /* Take more space for the input field */
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 5px 0 0 5px;
-    background-color: #fff;
+  flex: 2;
+  /* Take more space for the input field */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #fff;
 }
 
 .input-group select {
-    flex: 1;
-    /* Smaller space for the dropdown */
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-left: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #fff;
+  flex: 1;
+  /* Smaller space for the dropdown */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #fff;
 }
 
 .salary-type {
-    flex: 1;
-    /* Ensure salary type takes equal space */
+  flex: 1;
+  /* Ensure salary type takes equal space */
 }
 
 label select,
 label input {
-    width: 100%;
+  width: 100%;
 }
 
 .input-group input:focus,
 .input-group select:focus {
-    outline: none;
-    border-color: #007bff;
+  outline: none;
+  border-color: #007bff;
 }
 
 .advanced-info {
-    margin-bottom: 20px;
-    /* Add spacing below the section */
+  margin-bottom: 20px;
+  /* Add spacing below the section */
 }
 
 .advanced-info .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    /* Space between labels */
-    margin-bottom: 15px;
-    /* Space between rows */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* Space between labels */
+  margin-bottom: 15px;
+  /* Space between rows */
 }
 
 .advanced-info label {
-    flex: 1;
-    /* Each label takes up equal space */
+  flex: 1;
+  /* Each label takes up equal space */
 }
 
 label select,
 label input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 label select:focus,
 label input:focus {
-    outline: none;
-    border-color: #007bff;
+  outline: none;
+  border-color: #007bff;
 }
 
 @media (max-width: 768px) {
-    form {
-        padding: 15px;
-    }
+  form {
+    padding: 15px;
+  }
 
-    h2 {
-        font-size: 1.25rem;
-    }
+  h2 {
+    font-size: 1.25rem;
+  }
 
-    button {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-    }
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+.RecrAskNotify {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #cacaca;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.RecrAskNotify:hover{
+    color: white
 }

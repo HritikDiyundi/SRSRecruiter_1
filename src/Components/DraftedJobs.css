@@ -1,0 +1,66 @@
+.Recrdraft-jobs-container {
+  padding: 20px;
+}
+
+.Recrheader {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.Recrdraft-jobs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Recrdraft-job-card {
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Recrjob-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Recrtags,
+.Recrsalary,
+.Recrjob-level,
+.Recrexpiration {
+  margin: 5px 0;
+}
+
+.Recrjob-actions {
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.Recredit-btn,
+.Recrpost-btn,
+.Recrdelete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Recredit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.Recrpost-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.Recrdelete-btn {
+  background-color: #dc3545;
+  color: white;
+}

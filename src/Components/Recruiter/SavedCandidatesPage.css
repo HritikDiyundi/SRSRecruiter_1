@@ -1,0 +1,59 @@
+.Recrsaved-candidates-page {
+  padding: 20px;
+}
+
+.Recrheader {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.Recrcandidate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Recrcandidate-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Recrcandidate-name {
+  font-weight: bold;
+  flex: 1;
+}
+
+.Recrview-profile-btn,
+.Recrremove-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Recrview-profile-btn {
+  padding: 8px 12px;
+  background-color: #e7f0fa;
+  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Recrremove-btn {
+  background-color: #dc3545;
+  color: black;
+  
+}
+
+.Recrview-profile-btn:hover {
+  background-color: #0a65cc;
+  color: white;
+}
+.Recrremove-btn:hover{
+  color: white;
+}

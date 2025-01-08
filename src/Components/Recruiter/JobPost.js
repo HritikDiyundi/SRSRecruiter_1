@@ -1,26 +1,37 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./JobPost.css";
 
 const JobPost = ({ addJob }) => {
   console.log("before", addJob);
+  const location = useLocation();
+  const draftJob = location.state?.job;
+  // console.log(draftJob.minSalary)
 
-  const [jobTitle, setJobTitle] = useState("");
-  const [tags, setTags] = useState("");
-  const [jobRole, setJobRole] = useState("developer");
-  const [minSalary, setMinSalary] = useState("");
-  const [maxSalary, setMaxSalary] = useState("");
-  const [salaryType, setSalaryType] = useState("monthly");
-  const [education, setEducation] = useState("bachelors");
-  const [experience, setExperience] = useState("0-1");
-  const [jobType, setJobType] = useState("full-time");
-  const [vacancies, setVacancies] = useState("");
-  const [jobLevel, setJobLevel] = useState("entry");
-  const [expirationDate, setExpirationDate] = useState("");
-  const [description, setDescription] = useState("");
-  const [responsibilities, setResponsibilities] = useState("");
+  const [jobTitle, setJobTitle] = useState(draftJob?.jobTitle || "");
+  const [tags, setTags] = useState(draftJob?.tags || "");
+  const [jobRole, setJobRole] = useState(draftJob?.jobRole || "");
+  const [minSalary, setMinSalary] = useState(draftJob?.minSalary || "");
+  const [maxSalary, setMaxSalary] = useState(draftJob?.maxSalary || "");
+  const [salaryType, setSalaryType] = useState(draftJob?.salaryTyp || "");
+  const [education, setEducation] = useState(draftJob?.education || "");
+  const [experience, setExperience] = useState(draftJob?.experience || "");
+  const [jobType, setJobType] = useState(draftJob?.jobType || "");
+  const [vacancies, setVacancies] = useState(draftJob?.vacancies || "");
+  const [jobLevel, setJobLevel] = useState(draftJob?.jobLevel || "");
+  const [expirationDate, setExpirationDate] = useState(
+    draftJob?.expirationDate || ""
+  );
+  const [description, setDescription] = useState(draftJob?.description || "");
+  const [responsibilities, setResponsibilities] = useState(
+    draftJob?.responsibilities || ""
+  );
 
+  const handleAskNautify = () => {
+    console.log("Asking Nautify to generate content...");
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -243,20 +254,38 @@ const JobPost = ({ addJob }) => {
         <h3>Description & Responsibilities</h3>
         <label>
           Description:
-          <ReactQuill value={description} onChange={setDescription} style={{backgroundColor:"white"}}/>
-          {/* ai */}
+          <ReactQuill
+            value={description}
+            onChange={setDescription}
+            style={{ backgroundColor: "white" }}
+          />
         </label>
-        
 
         <label>
           Responsibilities:
-          <ReactQuill value={responsibilities} onChange={setResponsibilities}style={{backgroundColor:"white"}}/>
+          <ReactQuill
+            value={responsibilities}
+            onChange={setResponsibilities}
+            style={{ backgroundColor: "white" }}
+          />
+          <button
+            type="button"
+            onClick={handleAskNautify}
+            className="RecrAskNotify"
+            style={{
+              
+            }}
+          >
+            Ask Nautify
+          </button>
         </label>
 
         {/* Submit Button */}
         <button type="submit">Submit Job Post</button>
-        
-        <button type="submit" style={{marginLeft:"10px"}}>Draft Job Post</button>
+
+        <button type="submit" style={{ marginLeft: "10px" }}>
+          Draft Job Post
+        </button>
       </form>
     </div>
   );

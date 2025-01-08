@@ -4,6 +4,7 @@ import "./SavedCandidate.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const candidates = [
   {
@@ -205,6 +206,7 @@ const candidates = [
 ];
 
 const SavedCandidate = () => {
+  const navigate=useNavigate()
   const [selectedCandidate, setSelectedCandidate] = useState(null);
   const [dropdownVisibility, setDropdownVisibility] = useState({});
 
@@ -214,6 +216,10 @@ const SavedCandidate = () => {
 
   const closeOverlay = () => {
     setSelectedCandidate(null);
+  };
+
+  const handleViewProfile=()=>{
+    navigate("/viewprofile",{state:{defaultSelected:true} })
   };
 
   const toggleDropdown = (id) => {
@@ -235,10 +241,10 @@ const SavedCandidate = () => {
   return (
     <div className="saved-candidates-container">
       <header className="header">
-        <h3 className="saved-candidates-title">Saved Candidates</h3>
-        <p className="saved-candidates-until">
+        <h3 className="saved-candidates-title">Selected Candidates</h3>
+        {/* <p className="saved-candidates-until">
           All of the candidates are visible until <span>{formattedDate}</span>.
-        </p>
+        </p> */}
       </header>
       <div className="candidate-list">
         {candidates.map((candidate) => (
@@ -253,13 +259,13 @@ const SavedCandidate = () => {
                 <p>{candidate.role}</p>
               </div>
               <div className="actions">
-                <button className="bookmark">
+                {/* <button className="bookmark">
                   <FontAwesomeIcon
                     icon={faBookmark}
                     className="custom-bookmark-icon"
                   />
-                </button>
-                <button className="view-profile">View Profile &rarr;</button>
+                </button> */}
+                <button className="view-profile" onClick={handleViewProfile}>View Profile &rarr;</button>
                 <div className="more-options">
                   <button
                     className="menu-button"

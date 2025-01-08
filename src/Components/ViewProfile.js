@@ -38,6 +38,7 @@ const JobDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const applicants = location.state?.applicants;
+  const isDefaultSelected=location.state?.defaultSelected;
 
   const [saved, setSaved] = useState(false);
   const [isApplied, setIsApplied] = useState(false);
@@ -129,7 +130,13 @@ const JobDetails = () => {
                 <strong>
                   <FontAwesomeIcon icon={faCheck} />
                 </strong>
-                Select Candidate
+                {/* Select Candidate */}
+                {isDefaultSelected ? (
+                  <span>Select Candidates</span>
+                ) :(
+                  <span>Schedule Interview</span>
+                
+                )}
               </div>
             </div>
           </div>
