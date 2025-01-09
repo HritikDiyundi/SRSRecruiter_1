@@ -94,7 +94,7 @@ const JobListing = ({ jobs }) => {
   return (
     <div className="recr_main-content">
       <div className="recr_jobs">
-        <h3 style={{ marginBottom: "10px", fontSize: "1.3rem" }}>
+        <h3 className style={{ marginBottom: "10px", fontSize: "1.3rem" }}>
           Posted Jobs
         </h3>
         <table className="recr_jobs-table">

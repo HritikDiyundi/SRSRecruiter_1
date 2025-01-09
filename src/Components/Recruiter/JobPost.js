@@ -119,7 +119,7 @@ const JobPost = ({ addJob }) => {
         </div>
 
         {/* Salary Section */}
-        <h3>Salary</h3>
+        <h3 className="recr_job-post-heading">Salary</h3>
         <div className="salary-row">
           <div className="salary-input">
             <label>
@@ -174,7 +174,7 @@ const JobPost = ({ addJob }) => {
         </div>
 
         {/* Advanced Information Section */}
-        <h3>Advanced Information</h3>
+        <h3 className="recr_job-post-heading">Advanced Information</h3>
         <div className="advanced-info">
           <div className="row">
             <label>
@@ -251,7 +251,9 @@ const JobPost = ({ addJob }) => {
         </div>
 
         {/* Description & Responsibilities Section */}
-        <h3>Description & Responsibilities</h3>
+        <h3 className="recr_job-post-heading">
+          Description & Responsibilities
+        </h3>
         <label>
           Description:
           <ReactQuill
@@ -272,9 +274,7 @@ const JobPost = ({ addJob }) => {
             type="button"
             onClick={handleAskNautify}
             className="RecrAskNotify"
-            style={{
-              
-            }}
+            style={{}}
           >
             Ask Nautify
           </button>

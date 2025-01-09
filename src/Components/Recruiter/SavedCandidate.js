@@ -2,8 +2,8 @@ import React from "react";
 import "./SavedCandidate.css";
 
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faBookmark } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faStar, faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const candidates = [
@@ -232,11 +232,11 @@ const SavedCandidate = () => {
   const currentDate = new Date();
   const dynamicDate = new Date(currentDate);
   dynamicDate.setDate(currentDate.getDate() + 90);
-  const formattedDate = dynamicDate.toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  // const formattedDate = dynamicDate.toLocaleDateString("en-US", {
+  //   day: "numeric",
+  //   month: "long",
+  //   year: "numeric",
+  // });
 
   return (
     <div className="recr_saved-candidates-container">

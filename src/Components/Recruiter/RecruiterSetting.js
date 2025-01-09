@@ -6,27 +6,17 @@ import {
   faMapMarkerAlt,
   faPhone,
   faEnvelope,
-  faBriefcase,
-  faLocationDot,
-  faEye,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {
-  faArrowRight,
-  faTrashAlt,
-  faEllipsisH,
-  faUpload,
-  faLink,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUpload, faLink } from "@fortawesome/free-solid-svg-icons";
 
-import Header from "../Header";
 import {
   faGithub,
   faTwitterSquare,
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { icon } from "@fortawesome/fontawesome-svg-core";
+// import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const RecruiterSetting = () => {
   const [activeTab, setActiveTab] = useState("personal");
@@ -36,27 +26,21 @@ const RecruiterSetting = () => {
     { platform: "LinkedIn", link: "" },
     { platform: "Instagram", link: "" },
   ]);
-  const [activeResumeMenu, setActiveResumeMenu] = useState(null);
+  // const [activeResumeMenu, setActiveResumeMenu] = useState(null);
   //   const [showUploadResumeModal, setShowUploadResumeModal] = useState(false);
   //   const [resumeName, setResumeName] = useState("");
   //   const [uploadedFile, setUploadedFile] = useState(null);
   const [showProfileEdit, setShowProfileEdit] = useState(false);
   // const [activeTab, setActiveTab] = useState("Personal");
   // const [activeResumeMenu, setActiveResumeMenu] = useState(null);
-  const [showUploadResumeModal, setShowUploadResumeModal] = useState(false);
-  const [resumeName, setResumeName] = useState("");
-  const [uploadedFile, setUploadedFile] = useState(null);
+
   const [showAccountEdit, setShowAccountEdit] = useState(false);
 
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const [userResumes, setUserResumes] = useState([
-    "Resumes1.pdf",
-    "resumes2.pdf",
-  ]);
-  const maxResumes = 3;
+  // const maxResumes = 3;
 
   const dashboardData = {
     user: {

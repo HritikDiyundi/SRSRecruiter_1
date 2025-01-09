@@ -17,8 +17,7 @@ form {
   /* font-family: Arial, Helvetica, sans-serif; */
 }
 
-h2,
-h3 {
+.recr_job-post-heading{
   font-size: 1rem;
   /* Slightly smaller than before for a more refined look */
   color: #000000;

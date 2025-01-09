@@ -119,7 +119,7 @@ const RecruiterDashboard = () => {
       applications: 740,
       days: "Dec 7, 2019",
       expired: true,
-      expired: false,
+
       applicants: [
         {
           name: "Liam Brown",
@@ -154,14 +154,14 @@ const RecruiterDashboard = () => {
         <div className="recr_stats">
           <div className="recr_stat-1">
             <div>
-              <h3>589</h3>
+              <h3 className="recr_dashboard-h3">589</h3>
               <span>Open Jobs</span>
             </div>
             <p className="recr_stat_icon">👜</p>
           </div>
           <div className="recr_stat-2">
             <div>
-              <h3>2,517</h3>
+              <h3 className="recr_dashboard-h3">2,517</h3>
               <span>Saved Candidates</span>
             </div>
             <p className="recr_stat_icon">📟</p>
@@ -176,7 +176,10 @@ const RecruiterDashboard = () => {
             justifyContent: "space-between",
           }}
         >
-          <h3 style={{ fontSize: "1.3rem", fontWeight: "bold" }}>
+          <h3
+            className="recr_dashboard-h3"
+            style={{ fontSize: "1.3rem", fontWeight: "bold" }}
+          >
             Recent Posted Jobs
           </h3>
           <button
